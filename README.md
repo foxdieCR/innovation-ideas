@@ -2,7 +2,7 @@
     <img src="https://github.com/foxdieCR/innovation-ideas/blob/master/innovation-ideas.png" alt="innovation-ideas"/>
 </p>
 
-# innovation-ideas
+# Innovation-ideas
 App to add ideas and rate them
 ## TODO: fix README
 

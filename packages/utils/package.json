@@ -1,0 +1,18 @@
+{
+    "name": "@innovation-ideas/utils",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "test": "nyc --reporter=lcov ava --verbose",
+        "test:watch": "nyc --reporter=lcov ava --verbose --watch",
+        "test:report": "nyc report --reporter=html"
+    },
+    "devDependencies": {
+        "atob": "^2.1.1",
+        "ava": "^0.25.0",
+        "nyc": "^11.7.1"
+    },
+    "dependencies": {
+    }
+}

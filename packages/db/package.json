@@ -1,0 +1,12 @@
+{
+    "name": "@innovation-ideas/db",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "lodash": "^4.17.10",
+        "pg": "^7.4.1",
+        "sequelize": "^4.37.6",
+        "sequelize-transforms": "^2.0.0"
+    }
+}

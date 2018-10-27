@@ -1,0 +1,32 @@
+{
+    "name": "@innovation-ideas/auth-service",
+    "version": "1.0.0",
+    "main": "server.js",
+    "scripts": {
+        "start:env": "npm run server & npm start",
+        "server": "node server.js"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@innovation-ideas/db": "1.0.0",
+        "@innovation-ideas/utils": "1.0.0",
+        "dotenv-safe": "^5.0.1",
+        "body-parser": "^1.17.2",
+        "ejs": "^2.5.7",
+        "express": "^4.15.2",
+        "express-session": "^1.15.5",
+        "jsonwebtoken": "^7.4.1",
+        "nodemailer": "^4.4.1",
+        "passport": "^0.4.0",
+        "passport-facebook": "^2.1.1",
+        "passport-google-oauth": "^1.0.0"
+    },
+    "devDependencies": {
+    },
+    "nyc": {
+        "include": [
+            "server/controllers/*.js"
+        ],
+        "all": true
+    }
+}

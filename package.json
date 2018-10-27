@@ -12,7 +12,7 @@
     },
     "private": true,
     "author": "Emmanuel Alfaro",
-    "license": "ISC",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/foxdieCR/issues"
     },
