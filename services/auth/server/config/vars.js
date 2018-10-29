@@ -20,12 +20,8 @@ module.exports = {
     options: {
       host: process.env.DB_HOST,
       setup: process.env.DB_SETUP || false,
-
-      use_env_variable: 'DB_CONNECTION_STRING',
-      dialect: 'postgres',
-      ssl: true,
       dialectOptions: {
-        ssl: true,
+        ssl: process.env.DB_SSL || true,
       },
     },
   },

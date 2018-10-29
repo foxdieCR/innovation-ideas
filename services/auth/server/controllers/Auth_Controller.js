@@ -14,7 +14,7 @@ async function test(req, res) {
     // init db
     await startDB()
 
-    const testCompany = await db.ContactInfo.create({
+    const testCompany = await db.Company.create({
       name: 'probando',
     })
 
