@@ -8,9 +8,9 @@ dotenv.load({
   sample: join(__dirname, `./env/.env.example`),
 })
 
-module.exports = {
+module.exports = () => ({
   env: process.env.NODE_ENV,
-  port: process.env.PORT || 5050,
+  port: process.env.PORT || 3001,
   database: {
     credentials: {
       database: process.env.DB_NAME,
@@ -25,4 +25,4 @@ module.exports = {
       },
     },
   },
-}
+})

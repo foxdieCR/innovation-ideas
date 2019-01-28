@@ -1,18 +1,19 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const config = require('./vars')
 const { responseManagment } = require('@innovation-ideas/utils')
+const vars = require('./vars')
 
 const routes = require('../routes')
 
 const initRoutes = app => {
-  app.use('/', routes)
+  app.use('/api/', routes)
 }
 
 const initMiddlewares = app => {
   app.use(bodyParser.json())
   app.use(bodyParser.urlencoded({ extended: false }))
   app.use((req, res, next) => {
+    res.removeHeader('X-Powered-By')
     res.append('X-Powered-By', 'SOINLabs <soinlabs@soin.co.cr>')
     next()
   })
@@ -35,11 +36,13 @@ const init = () => {
   initViewsEngine(app)
   initResponses(app)
 
+  const { port } = vars()
+
   app
-    .listen(config.port, () => {
+    .listen(port, () => {
       console.log(
         'App listening on port %s, in environment %s!',
-        config.port,
+        port,
         process.env.NODE_ENV || 's'
       )
       console.log('**********************')

@@ -1,20 +1,25 @@
+const StandardError = require('standard-error')
 const initialize = require('@innovation-ideas/db')
-const { database } = require('../config/vars')
+const { logError } = require('@innovation-ideas/utils')
+const vars = require('../config/vars')
 
-let db = null
-
+let models = null
 async function startDB() {
-  if (!db) {
-    db = await initialize(database.credentials, database.options)
+  try {
+    const { database } = vars()
+    models = await initialize(database.credentials, database.options)
+  } catch (error) {
+    logError(new StandardError('DataBase not Found', { code: 404 }))
   }
+}
+
+if (module.parent) {
+  startDB()
 }
 
 async function test(req, res) {
   try {
-    // init db
-    await startDB()
-
-    const testCompany = await db.Company.create({
+    const testCompany = await models.Company.create({
       name: 'probando',
     })
 
@@ -22,8 +27,7 @@ async function test(req, res) {
 
     res.ok('Funka!')
   } catch (err) {
-    // TODO: add log elk
-    console.log(err)
+    logError(new StandardError(err.message, { code: err.code }))
 
     if (err.code) {
       switch (err.code) {
