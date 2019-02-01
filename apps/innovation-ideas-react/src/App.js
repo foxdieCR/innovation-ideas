@@ -1,8 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import axios from 'axios'
+import logo from './logo.svg'
+import './App.css'
+
+let PATH = 'http://localhost:4001/api/'
+if (process.env.NODE_ENV === 'production') {
+  PATH = '/api/'
+}
 
 class App extends Component {
+  componentDidMount() {
+    axios.get(PATH).then(result => {
+      console.log(result)
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -21,8 +33,8 @@ class App extends Component {
           </a>
         </header>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

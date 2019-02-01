@@ -1,0 +1,14 @@
+{
+  "name": "innovation-ideas-api",
+  "version": "1.0.0",
+  "description": "API REST for Innovation Ideas project ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emmanuel Alfaro",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
