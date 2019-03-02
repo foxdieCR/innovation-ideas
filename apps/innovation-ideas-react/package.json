@@ -6,6 +6,7 @@
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
+    "dotenv-safe": "^6.1.0",
     "express": "^4.16.4",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -16,10 +17,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "nodemon proxy/server",
-    "prd": "NODE_ENV=production node proxy/server"
+    "dev": "nodemon proxy/",
+    "prd": "NODE_ENV=production node proxy/"
   },
-
   "browserslist": [
     ">0.2%",
     "not dead",

@@ -2,6 +2,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const { join } = require('path')
 
+const environment = require('./config/vars')
+
 const app = express()
 
 const routes = require('./routes')
@@ -23,13 +25,10 @@ if (process.env.NODE_ENV === 'production') {
   })
 }
 
-app.listen(4001, () => {
+app.listen(environment.PORT, () => {
   console.log(
-    'App listening on port 4001!',
-    4001,
+    'innovation-ideas listening on port',
+    environment.PORT,
     process.env.NODE_ENV || 'develop'
   )
-  console.log('**********************')
-  console.log('innovation-ideas online')
-  console.log('**********************')
 })

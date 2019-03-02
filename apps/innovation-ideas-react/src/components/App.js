@@ -2,17 +2,16 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import logo from './logo.svg'
 import './App.css'
-
-let PATH = 'http://localhost:4001/api/'
-if (process.env.NODE_ENV === 'production') {
-  PATH = '/api/'
-}
+import config from '../config/vars'
 
 class App extends Component {
   componentDidMount() {
-    axios.get(PATH).then(result => {
-      console.log(result)
-    })
+    this.fetchData()
+  }
+
+  fetchData = async () => {
+    const response = await axios.get(`${config.APP_PATH}`)
+    console.log(response)
   }
 
   render() {
