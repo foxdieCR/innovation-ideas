@@ -1,7 +1,7 @@
-const responseManagment = require('./files/response')
-const logError = require('./logError')
+const jwt = require('./jsonwebtoken')
+const customResponse = require('./customResponses')
 
 module.exports = {
-  responseManagment,
-  logError,
+  jwt,
+  customResponse,
 }

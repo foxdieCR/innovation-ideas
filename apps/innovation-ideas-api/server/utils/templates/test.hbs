@@ -1,0 +1,132 @@
+<style type="text/css">
+    @font-face{
+        font-family: 'HelveticaMedium';
+        src: url('css/fonts/helvetica-neue-medium.ttf');
+    }
+    @font-face{
+        font-family: 'HelveticaLight';
+        src: url('css/fonts/HelveticaNeue-Light.otf');
+    }
+    @font-face{
+        font-family: 'HelveticaBold';
+        src: url('css/fonts/helvetica-neue-bold.ttf');
+    }
+    .container {
+        position: relative;
+        height: 350px;
+        width: 100%;
+        border: 1px solid #f1f2f2;
+        box-shadow: 0 6px 12px -3px rgba(0,0,0,.3);
+    }
+    .x-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .title {
+        position: absolute;
+        padding-top: 15px;
+        padding-left: 10px;
+        line-height: 1;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 50%;
+    }
+    .title span {
+        display: block;
+        font-family: 'HelveticaBold';
+        font-size: 20px;
+    }
+    .title span:first-of-type {
+        font-family: 'HelveticaMedium';
+        font-size: 15px;
+        color: #fc0e0b;
+    }
+    .title-img {
+        position: absolute;
+        padding-top: 20px;
+        padding-right: 25px;
+        top: 0;
+        right: 0;
+        text-align: right;
+        width: 40%;
+        height: 50%;
+    }
+    .tedx-logo {
+        width: 80%;
+        height: 40px;
+    }
+    .content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 85%;
+        height: 60%;
+        padding-left: 15%;
+    }
+    .content span {
+        display: block;
+    }
+    .name {
+        font-family: 'HelveticaBold';
+        font-size: 30px;
+        color: #fc0e0b;
+        word-wrap: break-word;
+    }
+    .id {
+        font-family: 'HelveticaMedium';
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .event {
+        font-family: 'HelveticaBold';
+        font-size: 18px;
+    }
+    .others {
+        font-family: 'HelveticaLight';
+        font-size: 12px;
+        display: block;
+    }
+</style>
+<html>
+    <body>
+        <div class="container">
+
+            <div class="title">
+                <span>
+                    {{year}}
+                </span>
+                <span>
+                    Certificado
+                </span>
+                <span>
+                    de asistencia
+                </span>
+            </div>
+
+            <div class="content">
+                <span class="name">
+                    {{name}}.
+                </span>
+                <span class="id">
+                    {{idType}}: {{id}}
+                </span>
+                <span class="event">
+                    Evento: {{event}}.
+                </span>
+                <span class="others">
+                    Fecha: {{date}}.
+                </span>
+                <span class="others">
+                    Hora de ingreso: {{checkin}}.
+                </span>
+                <span class="others">
+                    Hora de salida: {{checkout}}.
+                </span>
+            </div>
+        </div>
+    </body>
+</html>
