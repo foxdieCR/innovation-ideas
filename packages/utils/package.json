@@ -7,8 +7,8 @@
     "test": "jest test/**.test.js",
     "coverage": "jest --collectCoverageFrom=src/**.js --coverage test"
   },
-  "devDependencies": {},
   "dependencies": {
+    "@innovation-ideas/ui": "^1.0.0",
     "jsonwebtoken": "^8.5.1"
   }
 }

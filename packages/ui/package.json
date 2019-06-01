@@ -1,0 +1,22 @@
+{
+  "name": "@innovation-ideas/ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.11",
+    "react": "^16.8.6"
+  },
+  "scripts": {
+    "build:core": "babel core-src -d core --watch",
+    "build:icons": "babel icon-src -d icon --watch",
+    "build:storybook": "build-storybook",
+    "storybook": "start-storybook -p 6006"
+  }
+}
