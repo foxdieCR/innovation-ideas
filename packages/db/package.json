@@ -6,7 +6,7 @@
     "dependencies": {
         "lodash": "^4.17.10",
         "pg": "^7.4.1",
-        "sequelize": "^4.37.6",
+        "sequelize": "^5.15.1",
         "sequelize-transforms": "^2.0.0"
     }
 }
